@@ -3,7 +3,7 @@ title: "第 3 课 - 智能体模式：Plan 和 Autopilot"
 description: "探索智能体模式：使用 Plan 确定方案，使用 Autopilot 根据议题构建筛选功能，再使用 Interactive 审查并验证结果。"
 authors:
   - geektrainer
-lastUpdated: 2026-10-05
+lastUpdated: 2026-10-22
 ---
 
 我们先为项目添加了一项小功能，但更复杂的更改需要更完善的流程。GitHub Copilot app 支持组织现有的工作流程，帮助我们用正确的方法构建所需功能。从本课开始，你将通过几节课遵循典型的智能体驱动开发流程：先使用议题生成新功能，确认代码有效且功能行为符合预期，最终将更改成功合并到项目中。
@@ -56,12 +56,15 @@ Tailspin Toys 的游戏目录不断扩大，访客需要按类别和发行商缩
 
 开始前，确认星级评分 PR 已合并，并且本地 `main` 已更新。
 
-1. 选择 **Issues**，打开 **Allow users to filter games by category and publisher**。
-2. 选择 **New session**，再选择基于更新后 `main` 的 **new working tree**。
+1. 在侧边栏的 **Sessions** 下，选择 Tailspin Toys 存储库文件夹，然后在存储库顶部导航中选择 **Issues**。打开 **Allow users to filter games by category and publisher**。这是预先创建的议题，无需再创建一个。
+2. 选择 **New session**，然后选择基于更新后 `main` 的 **new working tree**。
 
     ![GitHub Copilot app 的议题视图，箭头指向 New session 按钮](../../../_images/app-new-session-from-issue.png)
 
 3. 确认议题已附加到会话，并在模式选择器中选择 **Plan**。
+
+> [!NOTE]
+> 如果找不到 Node.js 或 npm，请让智能体运行 `node --version` 和 `npm --version`。如果这些命令在终端中有效，但在会话中无效，请检查 app 的 PATH 或版本管理器设置，然后完全退出并重新打开 app。重试失败的操作和检查；不要只因为智能体找不到 npm 就重新安装 npm。
 
 ## 规划筛选功能
 
@@ -77,7 +80,7 @@ Build this feature.
 
 ## 明确批准 Autopilot
 
-对计划满意后，选择 **Approve and implement with autopilot**，或当前版本中的等效选项。确认模式指示器显示 **Autopilot**。
+对计划满意后，选择 **Approve and implement this plan**，或当前版本中的等效选项。不要假定批准后模式会自动切换，请确认当前模式指示器显示 **Autopilot**。
 
 Copilot 将开始实现功能。它会按既定计划逐步推进，生成代码、运行测试，并在过程中迭代。
 
@@ -104,12 +107,18 @@ Copilot 将开始实现功能。它会按既定计划逐步推进，生成代码
     ```
 
 2. 稍等片刻，应用将启动，Copilot app 内会打开浏览器窗口。
-3. 确认已评分的游戏卡片显示满分为五分的评分值。
-4. 完成后，使用以下提示词让 Copilot 停止为此会话启动的开发服务器，并关闭浏览器画布：
+3. 选择类别，确认结果与所选类别一致。清除筛选后，再选择 publisher 并确认结果相符。
+4. 组合类别和 publisher 筛选，并将结果与议题和已批准的计划对照。如果支持多个类别，还要验证已商定的组合行为。
+5. 尝试一个没有匹配游戏的筛选组合并检查空状态。清除或重置筛选，确认完整列表重新显示。
+6. 完成后，使用以下提示词让 Copilot 停止为此会话启动的开发服务器，并关闭浏览器画布：
 
     ```plaintext
     Stop the dev server and close the browser canvas.
     ```
+
+## 将此会话留给后续课程使用
+
+暂时不要创建或合并筛选功能 PR。请保留此会话、工作树和分支，供第 4 至第 8 课继续使用。接下来会将自定义指令应用于筛选代码，然后添加技能和 QA 改进，最后在第 8 课创建并合并合并后的 PR。停止开发服务器后，可以让会话保持空闲；下一课继续使用同一会话即可。
 
 ## 总结与后续步骤
 

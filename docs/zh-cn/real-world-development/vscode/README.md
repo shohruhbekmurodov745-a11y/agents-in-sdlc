@@ -1,14 +1,14 @@
 ---
 slug: zh-cn/real-world-development/vscode
-title: "VS Code"
+title: "Visual Studio Code"
 authors:
   - geektrainer
 lastUpdated: 2026-06-30
 ---
 
-VS Code 中的 **[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat)** 将 GitHub Copilot 带入了日常使用的代码编辑器。在 Visual Studio Code（以及 GitHub Codespaces）中，可以使用代理模式操作 Copilot Chat，通过 MCP 连接外部工具，并使用自定义代理，全程无需离开 IDE。在这里，Copilot 可以完整查看文件、终端和问题。
+VS Code 中的 **[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat)** 将 GitHub Copilot 带入你日常使用的代码编辑器。在 Visual Studio Code（以及 GitHub Codespaces）中，你可以使用 Copilot Chat 智能体模式、通过 MCP 连接外部工具并使用自定义智能体，全程无需离开 IDE。Copilot 可以查看文件、终端和问题。
 
-首先添加自定义指令，观察 Copilot 如何遵循这些指令，然后使用代理模式构建涵盖 UI、数据层和测试的筛选功能。接下来，连接 Playwright MCP 服务器，让 Copilot 操作浏览器测试功能，再创建拉取请求。最后，审阅并使用自定义代理完成无障碍改进，然后监控、引导并迭代 Copilot 的更改，全程无需离开编辑器。
+首先添加自定义指令并观察 Copilot 如何遵循指令，然后使用智能体模式跨 UI、数据层和测试构建筛选功能。接下来连接 Playwright MCP 服务器，让 Copilot 驱动浏览器测试功能，然后创建拉取请求。最后，审查并使用无障碍访问自定义智能体，监控、引导并迭代优化 Copilot 的更改，全程无需离开编辑器。
 
 ## 练习
 
@@ -18,10 +18,10 @@ VS Code 中的 **[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilo
 | [1. 自定义指令][ex1] | 上下文 | 在 VS Code 中添加并验证自定义指令 |
 | [2. 代理模式][ex2] | 代码生成 | 使用代理模式构建筛选功能 |
 | [3. 结合 Playwright 使用 MCP][ex3] | 外部工具 | 使用 Playwright MCP 服务器在浏览器中测试功能 |
-| [4. 自定义代理][ex4] | 专用代理 | 审阅并使用自定义代理 |
-| [5. 管理代理][ex5] | 监控 | 监控并引导代理会话 |
-| [6. 迭代][ex6] | 审阅 | 在本地审阅 Copilot 的工作并选择后续步骤 |
-| [可选：集成 Foundry][foundry-toolkit] | AI 代理 | 通过三个模块，使用 VS Code 和 Foundry Toolkit 准备模型、部署代理并将其连接到网站 |
+| [4. 自定义智能体][ex4] | 专用智能体 | 审查并使用自定义智能体 |
+| [5. 管理智能体][ex5] | 监控 | 监控并引导智能体会话 |
+| [6. 迭代优化][ex6] | 审查 | 在本地审查 Copilot 的工作并选择后续步骤 |
+| [可选：集成 Foundry][foundry-toolkit] | AI 智能体 | 使用 VS Code 和 Foundry Toolkit 分三个模块准备模型、部署智能体并将其连接到网站 |
 
 ## 先决条件
 

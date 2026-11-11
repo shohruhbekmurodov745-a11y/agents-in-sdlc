@@ -129,7 +129,7 @@ Esta verificação valida o projeto e o modelo antes de existir qualquer código
 20. Na mesma sessão, insira:
 
     ```plaintext
-    Use a skill do Microsoft Foundry para testar diretamente o modelo implantado no projeto tailspin-toys sem criar um agente. Fundamente a resposta no conteúdo de @db/catalog.json e pergunte: "Adoro jogos de quebra-cabeça sobre rastrear bugs. Qual jogo devo apoiar e quanto ele arrecadou?". Mostre a resposta e metadados úteis, como os tokens usados e o tempo de resposta, somente se estiverem disponíveis. Use meu login existente do Azure. Não exiba credenciais, altere arquivos nem crie recursos.
+    Use the Microsoft Foundry skill to test my deployed model directly in the tailspin-toys project without creating an agent. Ground it with content from @db/catalog.json and ask: "I love puzzle games about tracking down bugs. What should I back, and how much funding has it raised?" Show me the response and useful metadata such as tokens used and response time, only if available. Use my existing Azure sign-in. Do not display credentials, change files, or create resources.
     ```
 
 21. Revise a resposta. Ela deve recomendar apenas um jogo real de `db/catalog.json`, usar o título, a editora e a avaliação corretos e explicar que as informações de financiamento não estão disponíveis. Se o modelo inventar um jogo, detalhes do catálogo ou um valor de financiamento, compare outro modelo recomendado antes de continuar.
